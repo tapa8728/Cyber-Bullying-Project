@@ -1,15 +1,25 @@
-# Cyber-Bullying-Project
+# CyberBully2
 
-#Team Name 
-Busy-bees  
-#Team Members
+Mockup of a New Yelp Website made by Wintersmith
 
-Abeve Tayachow 
-Spencer Hood 
-Tanvi Parikh  
 
-#Implementation Plan 
-1. Build UI structure 
-2. 2. Display JSON Data in UI 
-3. 3. Find how to Post Data 
-4. 4. Allow User Input
+# Preview
+
+	$ wintersmith preview
+
+The site can now be accessed at [http://localhost:8080/yelp-ws](http://localhost:8080/yelp-ws)
+
+Note that the base path is currently set to `resume` so you must include `resume` in the url.
+
+# Deploy to gh-pages
+
+	$ wintersmith build
+
+	$ git add build
+
+	$ git commit -m 'build'	
+
+	$ git subtree push --prefix build origin gh-pages
+
+
+
