@@ -1,0 +1,21 @@
+block content
+	div.row
+		each item in captions     
+			div.six.columns.onecell
+				div.onerow
+					div
+						img(src=item.image_url).cellimage
+				br
+				div.onerow
+					div
+						h6= item.profile_owner_id
+				br
+				div.onerow
+					div
+						h6= item.owner_caption
+				br
+				div.onerow
+					div
+						h6= item.caption_time
+
+

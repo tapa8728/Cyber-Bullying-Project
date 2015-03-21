@@ -15,7 +15,8 @@ html(lang='en')
     div.container
         h1 Cyberbullying Study
         h5 Click each cell for post details
-    input#search(type="search", placeholder="Search by capation")
+    input#search(type="search", placeholder="Search by caption")
+  div#list
     div.row
         each item in contents.data['images.json'].metadata     
             div.four.columns.onecell
@@ -36,5 +37,7 @@ html(lang='en')
                         h6= item.caption_time
     // our app
   script(src="http://code.jquery.com/jquery.min.js")
+  script(src="js/lodash.min.js")
   script(src="js/search.js")
   script(src="js/app.js")
+  script(src="js/jade.js")
