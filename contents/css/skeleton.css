@@ -127,7 +127,7 @@
   .indonecell                     { min-height: 450px; }
   .reviewpiece                    { display: block; padding-top: 5px; padding-left: 10px; color: green; }
 
-  .cellimage                      { height: 200px; display: inline-block;}                                
+  .cellimage                      { height: 160px; display: inline-block;}                                
 
 
 /* Base Styles

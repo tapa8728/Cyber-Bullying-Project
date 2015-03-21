@@ -1,17 +1,11 @@
 extends layout
 
 block content
-	// display the detail of the first item
-	- var item = contents.data['images.json'].metadata[0]
-	div.twelve.columns
-		div.onerow
-			div
-				h5= item.profile_owner_id
-			div
-				h5= item.caption_time
-		div.onerow
-			img(src=item.image_url)
-		div.onerow
-			div
-				h5= item.owner_caption
+    // display the detail of the first item
+    - var item = contents.data['images.json'].metadata[0]
+    img(src=item.image_url)
+    div.row
+        div.one.column Owner
+        div.three.columns= item.profile_owner_id
+
 

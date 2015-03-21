@@ -1,40 +1,132 @@
 doctype html
 html(lang='en')
-  head        
-    base(href='/Cyber-Bullying-Project/')
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name='viewport', content='width=device-width')     
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Raleway:400,700,400')
-    link(rel='stylesheet', href='css/normalize.css')
-    link(rel='stylesheet', href='css/skeleton.css')
-    link(rel='stylesheet', href='css/custom.css')
+	head        
+		base(href='/Cyber-Bullying-Project/')
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width')     
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Raleway:400,700,400')
+		link(rel='stylesheet', href='css/normalize.css')
+		link(rel='stylesheet', href='css/skeleton.css')
+		link(rel='stylesheet', href='css/custom.css')
 
-  body
+	body
 
-    div.container
-        h1 Cyberbullying Study
-        h5 Click each cell for post details
-    input#search(type="search", placeholder="Search by capation")
-    div.row
-        each item in contents.data['images.json'].metadata     
-            div.four.columns.onecell
-                div.onerow
-                    div
-                        img(src=item.image_url).cellimage
-                br
-                div.onerow
-                    div
-                        h6= "Owner: " + item.profile_owner_id
-                br
-                div.onerow
-                    div
-                        h6= "Caption: " + item.owner_caption
-                br
-                div.onerow
-                    div
-                        h6= item.caption_time
-    // our app
-  script(src="http://code.jquery.com/jquery.min.js")
-  script(src="js/search.js")
-  script(src="js/app.js")
+		div.container
+			h1 Cyberbullying Study
+			h5 Click each cell for post details
+		input#search(type="search", placeholder="Search by caption")
+
+		div.row.four.columns
+			each item in contents.data['images.json'].metadata     
+				div.twelve.columns.onecell
+					div.onerow
+						div
+							img(src=item.image_url).cellimage
+					br
+					div.onerow
+						div
+							a(href='view/image.html')
+								h6= "Owner: " + item.profile_owner_id
+					br
+					div.onerow
+						div
+							h6= "Caption: " + item.owner_caption
+					br
+					div.onerow
+						div
+							h6= item.caption_time
+
+		div.row.six.columns
+			- var item = contents.data['images.json'].metadata[0]
+				div.onerow
+					div
+						img(src=item.image_url).cellimage
+				br
+				div.onerow
+					div
+						h6="Owner: " + item.profile_owner_id
+				br
+				div.onerow
+					div
+						h6="Caption: " + item.owner_caption
+				br
+				div.onerow
+					div
+						h6= item.caption_time
+				br
+				div.onerow
+					div
+						h6="Likes: " + item.likes
+				br
+				br
+				div.onerow
+					div
+						h6="Commenter: " + item.user_id_1
+				br
+				div.onerow
+					div
+						h6="Comment: " + item.comment_1
+				br
+				div.onerow
+					div
+						h6= item.creation_time_1
+				br
+				br
+				div.onerow
+					div
+						h6= item.user_id_2
+				br
+				div.onerow
+					div
+						h6= item.comment_2
+				br
+				div.onerow
+					div
+						h6= item.creation_time_2
+				br
+				br
+				div.onerow
+					div
+						h6= item.user_id_3
+				br
+				div.onerow
+					div
+						h6= item.comment_3
+				br
+				div.onerow
+					div
+						h6= item.creation_time_3
+				br
+				br
+				div.onerow
+					div
+						h6= item.user_id_4
+				br
+				div.onerow
+					div
+						h6= item.comment_4
+				br
+				div.onerow
+					div
+						h6= item.creation_time_4
+				br
+				br
+				div.onerow
+					div
+						h6= item.user_id_5
+				br
+				div.onerow
+					div
+						h6= item.comment_5
+				br
+				div.onerow
+					div
+						h6= item.creation_time_5
+				br
+				
+
+		// our app
+			script(src="http://code.jquery.com/jquery.min.js")
+			script(src="js/search.js")
+			script(src="js/app.js")
