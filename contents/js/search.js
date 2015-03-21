@@ -4,8 +4,16 @@ function searchCaption (data){
 	var json = JSON.parse(json_data);
 	//console.log("data --" + JSON.stringify(json, null, 4));
 	var search = getObjects(json, 'owner_caption', data.search.toLowerCase()) 
- 
-		console.log("search result " + JSON.stringify(search));
+ 	$.get("/Cyber-Bullying-Project/js/listImages.jade", function(template){
+      if (search !=[]){
+      var html = jade.render(template, {captions: search});
+      }else{
+          html = jade.render(template, {captions: json});
+          }
+      //console.log("captions is " + {captions})
+      $("#list").html(html);
+      });
+		//console.log("search result " + JSON.stringify(search));
 	
 	});
 }
