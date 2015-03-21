@@ -17,113 +17,94 @@ html(lang='en')
 			h5 Click each cell for post details
 		input#search(type="search", placeholder="Search by caption")
 
-		div.row.four.columns
+		div.row
 			each item in contents.data['images.json'].metadata     
-				div.twelve.columns.onecell
+				div.four.columns.onecell
 					div.onerow
 						div
 							img(src=item.image_url).cellimage
 					br
 					div.onerow
 						div
-							a(href='view/image.html')
-								h6= "Owner: " + item.profile_owner_id
+							h6="Owner: " + item.profile_owner_id
 					br
 					div.onerow
 						div
-							h6= "Caption: " + item.owner_caption
+							h6="Caption: " + item.owner_caption
 					br
 					div.onerow
 						div
 							h6= item.caption_time
-
-		div.row.six.columns
-			- var item = contents.data['images.json'].metadata[0]
-				div.onerow
-					div
-						img(src=item.image_url).cellimage
-				br
-				div.onerow
-					div
-						h6="Owner: " + item.profile_owner_id
-				br
-				div.onerow
-					div
-						h6="Caption: " + item.owner_caption
-				br
-				div.onerow
-					div
-						h6= item.caption_time
-				br
-				div.onerow
-					div
-						h6="Likes: " + item.likes
-				br
-				br
-				div.onerow
-					div
-						h6="Commenter: " + item.user_id_1
-				br
-				div.onerow
-					div
-						h6="Comment: " + item.comment_1
-				br
-				div.onerow
-					div
-						h6= item.creation_time_1
-				br
-				br
-				div.onerow
-					div
-						h6= item.user_id_2
-				br
-				div.onerow
-					div
-						h6= item.comment_2
-				br
-				div.onerow
-					div
-						h6= item.creation_time_2
-				br
-				br
-				div.onerow
-					div
-						h6= item.user_id_3
-				br
-				div.onerow
-					div
-						h6= item.comment_3
-				br
-				div.onerow
-					div
-						h6= item.creation_time_3
-				br
-				br
-				div.onerow
-					div
-						h6= item.user_id_4
-				br
-				div.onerow
-					div
-						h6= item.comment_4
-				br
-				div.onerow
-					div
-						h6= item.creation_time_4
-				br
-				br
-				div.onerow
-					div
-						h6= item.user_id_5
-				br
-				div.onerow
-					div
-						h6= item.comment_5
-				br
-				div.onerow
-					div
-						h6= item.creation_time_5
-				br
+					br
+					div.onerow
+						div
+							h6="Likes: " + item.likes
+					br
+					br
+					div.onerow
+						div
+							h6="Commenter: " + item.user_id_1
+					br
+					div.onerow
+						div
+							h6="Comment: " + item.comment_1
+					br
+					div.onerow
+						div
+							h6= item.creation_time_1
+					br
+					br
+					div.onerow
+						div
+							h6= item.user_id_2
+					br
+					div.onerow
+						div
+							h6= item.comment_2
+					br
+					div.onerow
+						div
+							h6= item.creation_time_2
+					br
+					br
+					div.onerow
+						div
+							h6= item.user_id_3
+					br
+					div.onerow
+						div
+							h6= item.comment_3
+					br
+					div.onerow
+						div
+							h6= item.creation_time_3
+					br
+					br
+					div.onerow
+						div
+							h6= item.user_id_4
+					br
+					div.onerow
+						div
+							h6= item.comment_4
+					br
+					div.onerow
+						div
+							h6= item.creation_time_4
+					br
+					br
+					div.onerow
+						div
+							h6= item.user_id_5
+					br
+					div.onerow
+						div
+							h6= item.comment_5
+					br
+					div.onerow
+						div
+							h6= item.creation_time_5
+					br
 				
 
 		// our app
