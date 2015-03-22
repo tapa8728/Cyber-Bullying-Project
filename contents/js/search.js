@@ -22,15 +22,18 @@ function searchCaption (data){
 function getObjects(obj, key , val) {
 	console.log("key " + key)
 	console.log("val " + val)
+	words = val.split(" ");
+	numberOfWords = words.length
 	var length = obj.length
 	var caption;
 	var malicious=[];
 	for (var i = 0; i < length; i++){
-		console.log(obj.length);
 		caption = obj[i].owner_caption.toLowerCase()
-		if (wordInString(caption, val)) 
+		for(var j = 0; j < numberOfWords; j++ )
+		if (wordInString(caption, words[j])) 
 			{
 			malicious.push(obj[i])
+			break;
 			}
 	}
 			console.log(" malicious length" + malicious.length )
