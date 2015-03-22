@@ -1,15 +1,13 @@
 # CyberBully2
 
-Mockup of a New Yelp Website made by Wintersmith
+A Web Application depicting the cyberbullying data
 
 
 # Preview
 
 	$ wintersmith preview
 
-The site can now be accessed at [http://localhost:8080/yelp-ws](http://localhost:8080/yelp-ws)
-
-Note that the base path is currently set to `resume` so you must include `resume` in the url.
+The site can now be accessed at [http://localhost:8080/Cyber-Bullying-Project/](http://localhost:8080/Cyber-Bullying-Project/)
 
 # Deploy to gh-pages
 
