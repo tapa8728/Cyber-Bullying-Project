@@ -259,7 +259,7 @@ textarea,
 select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #E69980;
+  background-color: #FF7575;
   border: 1px solid #FFFFFF;
   border-radius: 4px;
   box-shadow: none;
