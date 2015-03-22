@@ -3,4 +3,13 @@ $('#search').on('keyup', function(e){
 		var parameters = { search: $(this).val()};
 		searchCaption(parameters)
 	}
-	});
+});
+
+// function alert() {
+	$(document).ready(function() {
+		$('.onecell').click(function() {
+			alert("hihihi");
+		});
+	})
+
+// }
